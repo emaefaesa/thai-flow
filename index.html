@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color" content="#0b1711">
+    <meta name="description" content="Thai Flow: guía privada y offline para viajar por Tailandia sin itinerario rígido.">
+    <title>Thai Flow · Wild Offline Guide</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <a class="brand" href="#" aria-label="Thai Flow inicio">
+            <span class="brand-mark">TF</span>
+            <span class="brand-copy"><strong>THAI FLOW (❁´◡`❁)</strong><small>OFFLINE GUIDE · 2026</small></span>
+        </a>
+        <div class="top-actions">
+            <span id="offlineBadge" class="connection-pill">Comprobando…</span>
+            <button id="savedTopButton" class="icon-button" type="button" aria-label="Ver guardados">♥ <span id="savedTopCount">0</span></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">NO ITINERARY. NO PANIC.</p>
+                <!-- <h1>Fluir sin<br><em>perdernos nada.</em></h1> -->
+                <p class="hero-copy">Nuestra guía privada para decidir sobre la marcha: naturaleza, templos, café, comida, masaje, aventura, DnB, snorkel y rincones que merecen de verdad la alegría.</p>
+            </div>
+        </section>
+
+        <nav class="desktop-nav" aria-label="Secciones principales">
+            <button class="nav-item active" data-view="explore" type="button">Explorar</button>
+            <button class="nav-item" data-view="now" type="button">¿Qué hacemos?</button>
+            <button class="nav-item" data-view="saved" type="button">Guardados <span id="savedNavCount" class="count-dot">0</span></button>
+            <button class="nav-item" data-view="trip" type="button">Ruta</button>
+        </nav>
+
+        <section id="exploreView" class="view active">
+            <div class="toolbar-shell">
+                <div class="toolbar-heading">
+                    <div>
+                        <p class="eyebrow dark">EXPLORAR</p>
+                        <h2>Wheere we are man?</h2>
+                    </div>
+                    <button id="surpriseBtn" class="wild-button" type="button">✦ Sorpréndeme</button>
+                </div>
+
+                <div id="cityFilters" class="chips city-chips" aria-label="Filtrar por ciudad"></div>
+
+                <div class="search-row">
+                    <label class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Buscar DnB, khao soi, templo, sunset…" autocomplete="off">
+          </label>
+                    <!-- <div class="scope-toggle" aria-label="Nivel de selección">
+                        <button class="scope-btn active" type="button" data-scope="top">Selección</button>
+                        <button class="scope-btn" type="button" data-scope="all">Todo</button>
+                    </div> -->
+                </div>
+
+                <div id="categoryFilters" class="chips category-chips" aria-label="Filtrar por categoría"></div>
+            </div>
+
+            <div class="results-head">
+                <div>
+                    <p id="resultsMeta" class="results-meta"></p>
+                    <p id="resultsHint" class="results-hint">Primero enseñamos lo que más encaja con vosotros.</p>
+                </div>
+                <button id="clearFilters" class="text-button" type="button">Limpiar filtros</button>
+            </div>
+
+            <div id="placeGrid" class="card-grid"></div>
+            <div class="load-more-wrap"><button id="loadMoreBtn" class="load-more" type="button">Ver más lugares</button></div>
+        </section>
+
+        <section id="nowView" class="view">
+            <div class="section-intro">
+                <p class="eyebrow dark">DECISIÓN RÁPIDA</p>
+                <h2>¿Qué nos pide el cuerpo?</h2>
+                <p>No hace falta decidir el día entero. Elegid una energía y os enseña opciones guardadas que encajan.</p>
+            </div>
+            <div id="moodGrid" class="mood-grid"></div>
+            <div class="now-city-row">
+                <span>Filtrando en</span>
+                <select id="nowCitySelect" aria-label="Ciudad para recomendaciones rápidas"></select>
+            </div>
+            <div id="nowResults" class="card-grid"></div>
+        </section>
+
+        <section id="savedView" class="view">
+            <div class="section-intro">
+                <p class="eyebrow dark">NUESTRA LISTA</p>
+                <h2>Lo que no queremos olvidar.</h2>
+                <p>Los corazones se guardan en este dispositivo y siguen aquí aunque no tengáis conexión.</p>
+            </div>
+            <div id="savedGrid" class="card-grid"></div>
+        </section>
+
+        <section id="tripView" class="view">
+            <div class="section-intro">
+                <p class="eyebrow dark">RUTA ABIERTA</p>
+                <h2>Solo fijamos la base.</h2>
+                <p>Los alojamientos y transportes marcan el esqueleto; las experiencias las decidimos allí.</p>
+            </div>
+            <div id="tripTimeline" class="timeline"></div>
+
+            <div class="rules-grid">
+                <article class="rule-card food-rule">
+                    <span>🍜</span>
+                    <h3>Comer con cabeza</h3>
+                    <p>“Confianza alta” significa que el sitio pasa nuestra criba; nunca significa riesgo cero. Priorizamos rotación, reputación reciente y platos recién cocinados.</p>
+                </article>
+                <article class="rule-card elephant-rule">
+                    <span>🐘</span>
+                    <h3>Elefantes sin espectáculo</h3>
+                    <p>Sin montar, trucos ni persecuciones. Un combo ATV + elefantes solo entra como recomendado si la actividad no molesta ni condiciona a los animales.</p>
+                </article>
+                <article class="rule-card offline-rule">
+                    <span>⌁</span>
+                    <h3>Offline de verdad</h3>
+                    <p>Texto, favoritos y fotos locales funcionan sin datos. Los enlaces externos necesitan conexión, salvo que descarguéis antes las zonas en Google Maps.</p>
+                </article>
+            </div>
+
+            <details class="credits">
+                <summary>Créditos de las fotografías locales</summary>
+                <div id="creditsList"></div>
+            </details>
+        </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+        <button class="mobile-nav-item active" data-view="explore" type="button"><span>⌕</span>Explorar</button>
+        <button class="mobile-nav-item" data-view="now" type="button"><span>✦</span>Ahora</button>
+        <button class="mobile-nav-item" data-view="saved" type="button"><span>♥</span>Guardados</button>
+        <button class="mobile-nav-item" data-view="trip" type="button"><span>↝</span>Ruta</button>
+    </nav>
+
+    <template id="placeCardTemplate">
+    <article class="place-card">
+      <button class="card-open" type="button" aria-label="Abrir detalle">
+        <div class="card-media">
+          <img class="card-photo" alt="">
+          <div class="card-fallback" aria-hidden="true">
+            <!-- <span class="fallback-icon"></span> -->
+            <small>(❁´◡`❁)</small>
+          </div>
+          <div class="media-shade"></div>
+          <div class="card-topline">
+            <span class="priority"></span>
+            <span class="card-city"></span>
+          </div>
+          <div class="card-media-title">
+            <span class="card-icon"></span>
+            <span class="card-category"></span>
+          </div>
+        </div>
+        <div class="card-copy">
+          <h3 class="card-title"></h3>
+          <p class="card-summary"></p>
+          <div class="tags"></div>
+        </div>
+      </button>
+      <div class="card-actions">
+        <button class="save-btn" type="button"></button>
+        <a class="map-btn" target="_blank" rel="noopener">↗ Mapa</a>
+        <button class="detail-btn" type="button">Más info</button>
+      </div>
+    </article>
+  </template>
+
+    <dialog id="placeDialog" class="place-dialog">
+        <div class="dialog-shell">
+            <button id="dialogClose" class="dialog-close" type="button" aria-label="Cerrar">×</button>
+            <div id="dialogMedia" class="dialog-media"></div>
+            <div class="dialog-content">
+                <div class="dialog-headline">
+                    <p id="dialogKicker" class="eyebrow dark"></p>
+                    <h2 id="dialogTitle"></h2>
+                </div>
+                <div id="dialogTags" class="tags dialog-tags"></div>
+                <p id="dialogSummary" class="dialog-summary"></p>
+                <div class="why-box"><span>POR QUÉ ESTÁ AQUÍ</span>
+                    <p id="dialogWhy"></p>
+                </div>
+                <div class="dialog-actions">
+                    <button id="dialogSave" class="primary-action" type="button"></button>
+                    <a id="dialogMap" class="secondary-action" target="_blank" rel="noopener">Abrir mapa ↗</a>
+                    <a id="dialogInfo" class="secondary-action" target="_blank" rel="noopener">Web / info ↗</a>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
