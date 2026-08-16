@@ -407,7 +407,7 @@ main {
 }
 
 .wild-button {
-    background: var(--forest);
+    background: #b96f4e;
     color: #fff;
     box-shadow: var(--shadow-soft)
 }
