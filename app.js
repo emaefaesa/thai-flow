@@ -80,7 +80,6 @@ const cityLabels = {
   all: "Todos",
   bangkok: "Bangkok",
   chiangmai: "Chiang Mai",
-  pai: "Pai",
   kohtao: "Koh Tao",
   ayutthaya: "Ayutthaya",
 };

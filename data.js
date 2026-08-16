@@ -1,27 +1,28 @@
 window.TRIP_DATA = {
     "research": {
-        "version": "v5-photos-ui",
-        "lastVerified": "2026-08-14",
-        "note": "V5 añade muchas más fotos locales y mejora visual de la interfaz. Las fotos exactas se priorizan en templos y lugares clave; el resto usa coberturas representativas por ciudad/categoría para que la app sea más visual sin perder el modo offline."
+        "version": "v5.2-essential-gaps",
+        "lastVerified": "2026-08-16",
+        "note": "V5.2 corrige huecos de contenido importantes: Ancient City, skyline y miradores, zonas bellas/imprescindibles, templos singulares, naturaleza urbana y fauna más allá de elefantes. Mantiene las recomendaciones cercanas a hoteles de V5.1 y refuerza tags múltiples para que un sitio pueda aparecer en Animales, Miradores, Naturaleza o Zonas sin duplicar cards."
     },
-    "trip": [{
+    "trip": [
+        {
             "date": "19 AGO",
-            "title": "Bangkok · llegada",
-            "note": "Día suave. Dejar la misión Crocs como compra rápida si encaja por zona y energía."
+            "title": "Bangkok",
+            "note": "Llegada y día suave. Base: Queensland Hotel (Ratchathewi). Dejar Crocs, café, masaje o paseo corto como opciones según energía."
         },
         {
             "date": "20 AGO",
             "title": "Bangkok → Chiang Mai",
-            "note": "Vuelo a Chiang Mai. Empieza el bloque principal de norte."
+            "note": "Vuelo a Chiang Mai 17:20 - 18:35. Empieza el bloque principal de norte."
         },
         {
             "date": "20–25",
             "title": "Chiang Mai",
-            "note": "Base para naturaleza, cafés, masaje, aventura, elefantes éticos y esenciales. Pai queda como plan condicional, no obligatorio."
+            "note": "Base: Glory Wabi Sabi, junto al norte de Old City. Naturaleza, cafés, masaje, aventura, elefantes éticos e imprescindibles; Pai sigue como bonus."
         },
         {
             "date": "25 AGO",
-            "title": "Chiang Mai → Surat Thani → Koh Tao",
+            "title": "Chiang Mai 08:25 → Surat Thani 10:15 → Koh Tao 17:45",
             "note": "Día de traslado hacia la isla."
         },
         {
@@ -32,23 +33,27 @@ window.TRIP_DATA = {
         {
             "date": "29 AGO",
             "title": "Koh Tao → Bangkok",
-            "note": "Regreso a Bangkok. Candidato fuerte: Muay Thai en Rajadamnern esa noche si el horario de llegada lo permite."
+            "note": "Koh Tao 11:00 → Bangkok 18:55. Base final: Nouvo City Hotel. Candidato fuerte: Muay Thai en Rajadamnern esa noche si el traslado llega con margen."
         },
         {
             "date": "30 AGO–1 SEP",
             "title": "Bangkok + Ayutthaya",
-            "note": "Imprescindibles de Bangkok, buena comida, cafés, masajes y excursión a Ayutthaya."
+            "note": "Base: Nouvo City Hotel. Bangkok histórico, cafés, comida, masajes y excursión a Ayutthaya."
         },
         {
             "date": "2 SEP",
             "title": "Regreso",
-            "note": "Vuelo de madrugada."
+            "note": "Vuelo 02:30 → Qatar 05:05 → Qatar 08:35 → Bcn 14:40"
         }
     ],
     "categories": [
         [
             "all",
             "Todo"
+        ],
+        [
+            "nearhotel",
+            "🏨 Cerca del hotel"
         ],
         [
             "must",
@@ -127,7 +132,8 @@ window.TRIP_DATA = {
             "🥊 Muay Thai"
         ]
     ],
-    "moods": [{
+    "moods": [
+        {
             "id": "must",
             "icon": "⭐",
             "label": "Algo imprescindible",
@@ -224,7 +230,8 @@ window.TRIP_DATA = {
             ]
         }
     ],
-    "places": [{
+    "places": [
+        {
             "id": "rajadamnern-rws-2026-08-29",
             "city": "bangkok",
             "cityLabel": "Bangkok",
@@ -236,9 +243,12 @@ window.TRIP_DATA = {
             "tags": [
                 "muaythai",
                 "must",
-                "evening"
+                "evening",
+                "nearhotel",
+                "near-nouvo-city"
             ],
             "badges": [
+                "🏨 Nouvo City",
                 "RWS",
                 "noche",
                 "29 AGO"
@@ -255,7 +265,10 @@ window.TRIP_DATA = {
                 "license": "CC BY-SA 4.0",
                 "source": "https://commons.wikimedia.org/wiki/File:Rajadamnern_Stadium.jpg"
             },
-            "verified": "2026-08-14"
+            "verified": "2026-08-14",
+            "nearHotels": [
+                "nouvo-city"
+            ]
         },
         {
             "id": "siam-square-crocs",
@@ -269,9 +282,12 @@ window.TRIP_DATA = {
             "tags": [
                 "shopping",
                 "quick",
-                "day1"
+                "day1",
+                "nearhotel",
+                "near-queensland"
             ],
             "badges": [
+                "🏨 Queensland",
                 "rápido",
                 "día 1"
             ],
@@ -287,7 +303,10 @@ window.TRIP_DATA = {
                 "license": "CC BY 2.0",
                 "source": "https://commons.wikimedia.org/wiki/File:Siam_Square,_Bangkok_(48107977133).jpg"
             },
-            "verified": "2026-08-14"
+            "verified": "2026-08-14",
+            "nearHotels": [
+                "queensland"
+            ]
         },
         {
             "id": "elephant-nature-park",
@@ -327,7 +346,7 @@ window.TRIP_DATA = {
             "cityLabel": "Koh Tao",
             "name": "Tanote Bay",
             "icon": "🤿",
-            "image": "./img/places/tanote-bay.webp",
+            "image": "./img/places/tanote-baay.jpg",
             "imageStatus": "ready",
             "category": "snorkel",
             "tags": [
@@ -360,7 +379,7 @@ window.TRIP_DATA = {
             "cityLabel": "Koh Tao",
             "name": "Aow Leuk",
             "icon": "🐠",
-            "image": "./img/places/aow-leuk.webp",
+            "image": "./img/places/Aow-Leuk-Koh-Tao.jpg",
             "imageStatus": "ready",
             "category": "snorkel",
             "tags": [
@@ -424,7 +443,7 @@ window.TRIP_DATA = {
             "cityLabel": "Koh Tao",
             "name": "Sai Nuan Beach",
             "icon": "🌅",
-            "image": "./img/places/sai-nuan.webp",
+            "image": "./img/places/sai-nuan-beach.webp",
             "imageStatus": "ready",
             "category": "sunset",
             "tags": [
@@ -534,7 +553,7 @@ window.TRIP_DATA = {
             "photoQuery": "Wat Arun Bangkok Wikimedia Commons",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "image": "./img/places/wat-arun-wide.webp"
+            "image": "./img/places/wat-arun-2.jpg"
         },
         {
             "id": "krua-apsorn",
@@ -546,9 +565,12 @@ window.TRIP_DATA = {
             "tags": [
                 "food",
                 "thai",
-                "michelin"
+                "michelin",
+                "nearhotel",
+                "near-nouvo-city"
             ],
             "badges": [
+                "🏨 Nouvo City",
                 "MICHELIN 2026",
                 "thai",
                 "$$"
@@ -564,7 +586,10 @@ window.TRIP_DATA = {
             "photoQuery": "Krua Apsorn Bangkok restaurant",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "image": "./img/places/krua-apsorn.jpeg"
+            "image": "./img/places/krua-apsorn.jpeg",
+            "nearHotels": [
+                "nouvo-city"
+            ]
         },
         {
             "id": "somboon-seafood-bang-rak",
@@ -633,9 +658,12 @@ window.TRIP_DATA = {
             "category": "coffee",
             "tags": [
                 "coffee",
-                "specialty"
+                "specialty",
+                "nearhotel",
+                "near-queensland"
             ],
             "badges": [
+                "🏨 Queensland",
                 "specialty",
                 "Phaya Thai"
             ],
@@ -649,7 +677,10 @@ window.TRIP_DATA = {
             "photoQuery": "Factory Coffee Bangkok",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "image": "./img/places/factory-coffee.jpg"
+            "image": "./img/places/factory-coffee.jpg",
+            "nearHotels": [
+                "queensland"
+            ]
         },
         {
             "id": "health-land-asoke",
@@ -689,7 +720,8 @@ window.TRIP_DATA = {
                 "temple",
                 "must",
                 "nature",
-                "view"
+                "view",
+                "viewpoint"
             ],
             "badges": [
                 "MUST",
@@ -835,7 +867,11 @@ window.TRIP_DATA = {
                 "must",
                 "daytrip",
                 "waterfall",
-                "hike"
+                "hike",
+                "animals",
+                "wildlife",
+                "birds",
+                "viewpoint"
             ],
             "badges": [
                 "día completo",
@@ -845,8 +881,8 @@ window.TRIP_DATA = {
             "priority": "MUY ALTO",
             "duration": "día completo",
             "bestTime": "Salir temprano",
-            "summary": "Parque nacional de montaña con bosque húmedo, senderos, cascadas y el punto más alto de Tailandia.",
-            "why": "Si el tiempo acompaña, es una de las excursiones que más encajan con vuestra prioridad de naturaleza en el norte.",
+            "summary": "Parque nacional de montaña con bosque húmedo, senderos, cascadas, gran biodiversidad y el punto más alto de Tailandia.",
+            "why": "Si el tiempo acompaña, es de los planes que mejor encajan en un día de naturaleza. Dentro del parque, Ang Ka Nature Trail es especialmente interesante por su bosque nuboso, musgos y observación de aves.",
             "maps": "https://www.google.com/maps/search/?api=1&query=Doi+Inthanon+National+Park",
             "info": "https://www.tourismthailand.org/Attraction/doi-inthanon-national-park",
             "photoQuery": "Doi Inthanon National Park Wikimedia Commons",
@@ -1152,7 +1188,8 @@ window.TRIP_DATA = {
             "info": "https://www.makkhahealthandspa.com/",
             "photoQuery": "Makkha Colonial Gardens Chiang Mai",
             "verified": "2026-08-14",
-            "imageStatus": "pending"        },
+            "imageStatus": "pending"
+        },
         {
             "id": "sunrise-specialty-koh-tao",
             "city": "kohtao",
@@ -1179,7 +1216,7 @@ window.TRIP_DATA = {
             "photoQuery": "Sunrise Specialty Coffee Koh Tao",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "image": "./img/places/sunrise-koh-tao.jpg"
         },
         {
             "id": "uncle-bews",
@@ -1206,8 +1243,7 @@ window.TRIP_DATA = {
             "info": "https://www.google.com/maps/search/?api=1&query=Uncle+Bew%27s+Cafe+Roastery+Koh+Tao",
             "photoQuery": "Uncle Bews Cafe Roastery Koh Tao",
             "verified": "2026-08-14",
-            "imageStatus": "pending",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "imageStatus": "pending"
         },
         {
             "id": "karaweik-koh-tao",
@@ -1235,8 +1271,7 @@ window.TRIP_DATA = {
             "info": "https://www.google.com/maps/search/?api=1&query=Karaweik+Koh+Tao",
             "photoQuery": "Karaweik Koh Tao restaurant",
             "verified": "2026-08-14",
-            "imageStatus": "pending",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "imageStatus": "pending"
         },
         {
             "id": "luna-massage-koh-tao",
@@ -1262,8 +1297,7 @@ window.TRIP_DATA = {
             "info": "https://www.google.com/maps/search/?api=1&query=Luna+Massage+Koh+Tao",
             "photoQuery": "Luna Massage Koh Tao",
             "verified": "2026-08-14",
-            "imageStatus": "pending",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "imageStatus": "pending"
         },
         {
             "id": "wat-mahathat-ayutthaya",
@@ -1574,7 +1608,6 @@ window.TRIP_DATA = {
             "category": "river",
             "tags": [
                 "river",
-                "must",
                 "transport",
                 "area"
             ],
@@ -1583,7 +1616,7 @@ window.TRIP_DATA = {
                 "11 muelles",
                 "cada ~30 min"
             ],
-            "priority": "MUY ALTO",
+            "priority": "ALTO",
             "duration": "Flexible",
             "bestTime": "Día de templos / Chinatown",
             "summary": "Barco turístico por el Chao Phraya con paradas útiles en Sathorn, ICONSIAM, Ratchawongse, Pak Khlong Talat, Wat Arun, Tha Chang y Phra Arthit.",
@@ -1622,7 +1655,6 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": ""
-                // "image": "./img/places/bangkok-city.webp"
         },
         {
             "id": "chatuchak-weekend-market",
@@ -1692,9 +1724,12 @@ window.TRIP_DATA = {
             "tags": [
                 "temple",
                 "viewpoint",
-                "sunset"
+                "sunset",
+                "nearhotel",
+                "near-nouvo-city"
             ],
             "badges": [
+                "🏨 Nouvo City",
                 "Golden Mount",
                 "vistas"
             ],
@@ -1708,7 +1743,10 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/Wat-Saket.webp"
+            "image": "./img/places/Wat-Saket.webp",
+            "nearHotels": [
+                "nouvo-city"
+            ]
         },
         {
             "id": "loha-prasat",
@@ -2168,7 +2206,9 @@ window.TRIP_DATA = {
             "category": "temple",
             "tags": [
                 "temple",
-                "culture"
+                "culture",
+                "nearhotel",
+                "near-glory-wabi-sabi"
             ],
             "bestTime": "Mañana / según ruta",
             "info": "https://www.google.com/maps/search/?api=1&query=Wat+Chiang+Man+Chiang+Mai",
@@ -2176,6 +2216,7 @@ window.TRIP_DATA = {
             "name": "Wat Chiang Man",
             "icon": "🛕",
             "badges": [
+                "🏨 Glory Wabi Sabi",
                 "templo más antiguo",
                 "Old City"
             ],
@@ -2187,7 +2228,10 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/chedi-du-wat-chiang-man.jpg"
+            "image": "./img/places/chedi-du-wat-chiang-man.jpg",
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ]
         },
         {
             "city": "chiangmai",
@@ -2392,7 +2436,12 @@ window.TRIP_DATA = {
             "tags": [
                 "nature",
                 "cave",
-                "daytrip"
+                "daytrip",
+                "animals",
+                "wildlife",
+                "birds",
+                "butterflies",
+                "viewpoint"
             ],
             "badges": [
                 "cuevas",
@@ -2981,7 +3030,7 @@ window.TRIP_DATA = {
             "maps": "https://www.google.com/maps/search/?api=1&query=Lila+Thai+Massage+Chiang+Mai",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
+            "priceLevel": ""
         },
         {
             "city": "chiangmai",
@@ -3009,7 +3058,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": ""
-                },
+        },
         {
             "city": "chiangmai",
             "cityLabel": "Chiang Mai",
@@ -3075,9 +3124,12 @@ window.TRIP_DATA = {
                 "music",
                 "live",
                 "jazz",
-                "night"
+                "night",
+                "nearhotel",
+                "near-glory-wabi-sabi"
             ],
             "badges": [
+                "🏨 Glory Wabi Sabi",
                 "live diario",
                 "19:30–01 aprox",
                 "icono local"
@@ -3092,7 +3144,10 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/north-jazz.jpg"
+            "image": "./img/places/north-jazz.jpg",
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ]
         },
         {
             "id": "moments-notice-jazz",
@@ -3152,7 +3207,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": ""
-                },
+        },
         {
             "id": "dnb-thailand-chiangmai-tracker",
             "city": "chiangmai",
@@ -3207,7 +3262,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "image": "./img/places/hin-wong-bay-koh-tao.webp"
         },
         {
             "city": "kohtao",
@@ -3221,7 +3276,8 @@ window.TRIP_DATA = {
                 "snorkel",
                 "must",
                 "island",
-                "viewpoint"
+                "viewpoint",
+                "animals"
             ],
             "badges": [
                 "barco",
@@ -3237,7 +3293,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "image": "./img/places/koh-nang-yuan.jpg"
         },
         {
             "city": "kohtao",
@@ -3267,7 +3323,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "image": "./img/places/mango-bay.jpg"
         },
         {
             "city": "kohtao",
@@ -3297,7 +3353,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "image": "./img/places/john-suwan.webp"
         },
         {
             "city": "kohtao",
@@ -3327,7 +3383,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "image": "./img/places/WESTCOAST.jpg"
         },
         {
             "city": "kohtao",
@@ -3356,7 +3412,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "image": "./img/places/piera-point.webp"
         },
         {
             "city": "kohtao",
@@ -3384,7 +3440,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "image": "./img/places/freedom-beach-two-koh-tao.webp"
         },
         {
             "city": "kohtao",
@@ -3412,8 +3468,7 @@ window.TRIP_DATA = {
             "maps": "https://www.google.com/maps/search/?api=1&query=Krua+Siam+Koh+Tao",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "priceLevel": ""
         },
         {
             "city": "kohtao",
@@ -3441,8 +3496,7 @@ window.TRIP_DATA = {
             "maps": "https://www.google.com/maps/search/?api=1&query=P%27noot+Thai+Food+Koh+Tao",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "priceLevel": ""
         },
         {
             "city": "kohtao",
@@ -3471,7 +3525,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "image": "./img/places/cattago.jpg"
         },
         {
             "city": "kohtao",
@@ -3499,8 +3553,7 @@ window.TRIP_DATA = {
             "maps": "https://www.google.com/maps/search/?api=1&query=Eagle+View+Koh+Tao",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "priceLevel": ""
         },
         {
             "city": "kohtao",
@@ -3528,7 +3581,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "image": "./img/places/medium_de_coffee_breakfast.jpg"
         },
         {
             "city": "kohtao",
@@ -3554,8 +3607,7 @@ window.TRIP_DATA = {
             "maps": "https://www.google.com/maps/search/?api=1&query=Massage+Station+Koh+Tao",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "priceLevel": ""
         },
         {
             "city": "kohtao",
@@ -3581,8 +3633,7 @@ window.TRIP_DATA = {
             "maps": "https://www.google.com/maps/search/?api=1&query=Paradise+Massage+Koh+Tao",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-snorkel-generic.webp"
+            "priceLevel": ""
         },
         {
             "id": "maya-beach-dnb-thursday",
@@ -3611,8 +3662,7 @@ window.TRIP_DATA = {
             "info": "https://www.instagram.com/maya_beach_club/",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "priceLevel": ""
         },
         {
             "id": "fishbowl-beach-bar",
@@ -3641,8 +3691,7 @@ window.TRIP_DATA = {
             "info": "https://www.google.com/maps/search/?api=1&query=Fishbowl+Beach+Bar+Koh+Tao",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "priceLevel": ""
         },
         {
             "id": "dnb-thailand-kohtao-tracker",
@@ -3669,8 +3718,7 @@ window.TRIP_DATA = {
             "info": "https://www.dnb-thailand.com/",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "priceLevel": ""
         },
         {
             "id": "secret-bar-kohtao",
@@ -3699,7 +3747,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "image": "./img/places/secret-bar.jpg"
         },
         {
             "id": "high-the-moon-kohtao",
@@ -3729,7 +3777,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "image": "./img/places/cafe-high-the-moon.jpg"
         },
         {
             "city": "ayutthaya",
@@ -3756,7 +3804,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/ayutthaya-temple-generic.webp"
+            "image": "./img/places/wat-yai-chai-mongkhon-reclining-buddha-l.jpg"
         },
         {
             "city": "ayutthaya",
@@ -3784,7 +3832,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/ayutthaya-temple-generic.webp"
+            "image": "./img/places/wat-ratchaburana.jpg"
         },
         {
             "city": "ayutthaya",
@@ -3812,7 +3860,7 @@ window.TRIP_DATA = {
             "verified": "2026-08-14",
             "imageStatus": "pending",
             "priceLevel": "",
-            "image": "./img/places/wat-yai-chai-mongkhon-reclining-buddha-l.jpg"
+            "image": "./img/places/wat-yai-chai-mongkhon.jpg"
         },
         {
             "id": "coffeenity-ayutthaya",
@@ -4152,8 +4200,7 @@ window.TRIP_DATA = {
             "info": "https://www.instagram.com/locked.in.club/",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            // "image": "./img/places/chiangmai-temple-generic.webp"
+            "priceLevel": ""
         },
         {
             "id": "goodtime-beachclub-bass-kohtao",
@@ -4184,8 +4231,1338 @@ window.TRIP_DATA = {
             "info": "https://goodtimethailand.com/beach-club/",
             "verified": "2026-08-14",
             "imageStatus": "pending",
-            "priceLevel": "",
-            "image": "./img/places/kohtao-coast.webp"
+            "priceLevel": ""
+        },
+        {
+            "id": "piccolo-vicolo-ratchathewi",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Piccolo Vicolo",
+            "icon": "☕",
+            "category": "coffee",
+            "tags": [
+                "coffee",
+                "specialty",
+                "nearhotel",
+                "near-queensland"
+            ],
+            "nearHotels": [
+                "queensland"
+            ],
+            "badges": [
+                "🏨 Queensland",
+                "Ratchathewi",
+                "4.7 · 993 reseñas",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "45–60 min",
+            "bestTime": "Mañana / media tarde",
+            "summary": "Café escondido en un pequeño callejón de Ratchathewi, con muy buenas valoraciones y ambiente más especial que una cadena.",
+            "why": "Buena carta cercana al Queensland cuando queráis empezar el viaje con un café bonito sin desplazaros a otro barrio.",
+            "address": "535/31 Wat Phraya Yang Alley, Thanon Phetchaburi, Ratchathewi, Bangkok 10400, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Piccolo+Vicolo+Bangkok",
+            "info": "https://www.google.com/maps/search/?api=1&query=Piccolo+Vicolo+Bangkok",
+            "photoQuery": "Piccolo Vicolo Bangkok",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "jasmine-siam-kitchen-ratchathewi",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Jasmine Siam Kitchen",
+            "icon": "🍜",
+            "category": "food",
+            "tags": [
+                "food",
+                "thai",
+                "nearhotel",
+                "near-queensland"
+            ],
+            "nearHotels": [
+                "queensland"
+            ],
+            "badges": [
+                "🏨 Queensland",
+                "thai",
+                "4.7 · 1.1k reseñas",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "1–1.5 h",
+            "bestTime": "Comida / cena",
+            "foodConfidence": "MEDIA-ALTA · no garantía",
+            "summary": "Restaurante tailandés muy bien valorado en Ratchathewi, práctico para una primera comida sin alejaros del hotel.",
+            "why": "Lo guardamos por cercanía, volumen de reseñas y formato de restaurante sentado. Sigue aplicando nuestra regla de comida bien cocinada y servida caliente.",
+            "address": "497/14-15 Phetchaburi Rd, Thung Phaya Thai, Ratchathewi, Bangkok 10400, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Jasmine+Siam+Kitchen+Bangkok",
+            "info": "https://www.google.com/maps/search/?api=1&query=Jasmine+Siam+Kitchen+Bangkok",
+            "photoQuery": "Jasmine Siam Kitchen Bangkok",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "navara-thai-massage-ratchathewi",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Navara Thai Massage",
+            "icon": "💆",
+            "category": "massage",
+            "tags": [
+                "massage",
+                "nearhotel",
+                "near-queensland"
+            ],
+            "nearHotels": [
+                "queensland"
+            ],
+            "badges": [
+                "🏨 Queensland",
+                "4.8",
+                "Phetchaburi 15",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "1–2 h",
+            "bestTime": "Tarde / noche",
+            "summary": "Masaje tailandés muy bien valorado en la zona de Phetchaburi 15, útil para el día de llegada.",
+            "why": "Especialmente práctico si aterrizáis cansados: queda en la misma área de Ratchathewi y abre hasta tarde.",
+            "address": "30/4 Phetchaburi 15 Yeak 2 Alley, Thanon Phaya Thai, Ratchathewi, Bangkok 10400, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Navara+Thai+Massage+Bangkok",
+            "info": "https://www.google.com/maps/search/?api=1&query=Navara+Thai+Massage+Bangkok",
+            "photoQuery": "Navara Thai Massage Bangkok",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "jim-thompson-house",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Jim Thompson House Museum",
+            "icon": "🏡",
+            "category": "area",
+            "tags": [
+                "culture",
+                "museum",
+                "nearhotel",
+                "near-queensland"
+            ],
+            "nearHotels": [
+                "queensland"
+            ],
+            "badges": [
+                "🏨 Queensland",
+                "museo",
+                "4.5 · 17k reseñas",
+                "plan corto"
+            ],
+            "priority": "MEDIO-ALTO",
+            "duration": "1–2 h",
+            "bestTime": "Mañana / tarde",
+            "summary": "Casa-museo tradicional tailandesa rodeada de jardín, una visita cultural fácil de encajar desde Ratchathewi.",
+            "why": "No es un MUST por encima de los grandes templos, pero es un plan cómodo si el primer día tenéis energía y no queréis cruzar Bangkok.",
+            "address": "6 Kasem San 2 Alley, Wang Mai, Pathum Wan, Bangkok 10330, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Jim+Thompson+House+Museum+Bangkok",
+            "info": "https://www.jimthompsonhouse.org/",
+            "photoQuery": "Jim Thompson House Bangkok",
+            "imageStatus": "pending",
+            "verified": "2026-08-16",
+            "image": "./img/places/jim-thompson.jpg"
+        },
+        {
+            "id": "mew-coffee-craft-chiangmai",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "mew.coffee.craft",
+            "icon": "☕",
+            "category": "coffee",
+            "tags": [
+                "coffee",
+                "nearhotel",
+                "near-glory-wabi-sabi"
+            ],
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ],
+            "badges": [
+                "🏨 Glory Wabi Sabi",
+                "misma calle",
+                "4.7",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "30–60 min",
+            "bestTime": "Mañana / tarde",
+            "summary": "Café en Sanamkila Road, prácticamente en la misma zona del Glory Wabi Sabi.",
+            "why": "No sustituye a Akha Ama o Ponganes como destino cafetero, pero es el comodín perfecto cuando queréis buen café sin moveros.",
+            "address": "2/5 Sanamkila Rd, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=mew.coffee.craft+Chiang+Mai",
+            "info": "https://www.google.com/maps/search/?api=1&query=mew.coffee.craft+Chiang+Mai",
+            "photoQuery": "mew coffee craft Chiang Mai",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "good-shot-coffee-bar-chiangmai",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "Good Shot coffee bar",
+            "icon": "☕",
+            "category": "coffee",
+            "tags": [
+                "coffee",
+                "oldcity",
+                "nearhotel",
+                "near-glory-wabi-sabi"
+            ],
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ],
+            "badges": [
+                "🏨 Glory Wabi Sabi",
+                "Old City",
+                "4.8",
+                "café"
+            ],
+            "priority": "ALTO",
+            "duration": "30–60 min",
+            "bestTime": "Mañana",
+            "summary": "Cafetería muy bien valorada en el norte de Old City, fácil de combinar con Wat Chiang Man y paseos por el casco antiguo.",
+            "why": "Añade una opción cercana y sencilla frente a los tostadores que merecen un desplazamiento específico.",
+            "address": "173/2 Ratchapakhinai Rd, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Good+Shot+coffee+bar+Chiang+Mai",
+            "info": "https://www.google.com/maps/search/?api=1&query=Good+Shot+coffee+bar+Chiang+Mai",
+            "photoQuery": "Good Shot coffee bar Chiang Mai",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "garden-to-table-chiangmai",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "Garden to Table Chiangmai",
+            "icon": "🍜",
+            "category": "food",
+            "tags": [
+                "food",
+                "thai",
+                "oldcity",
+                "nearhotel",
+                "near-glory-wabi-sabi"
+            ],
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ],
+            "badges": [
+                "🏨 Glory Wabi Sabi",
+                "4.9 · 2k reseñas",
+                "thai",
+                "Old City"
+            ],
+            "priority": "ALTO",
+            "duration": "1–1.5 h",
+            "bestTime": "Comida / cena temprana",
+            "foodConfidence": "MEDIA-ALTA · no garantía",
+            "summary": "Restaurante tailandés de precio contenido y valoraciones muy fuertes dentro de Old City.",
+            "why": "Buen comodín cercano al hotel para comer sentado y con mucha rotación, sin renunciar a cocina local.",
+            "address": "136/4 Ratchapakhinai Rd, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Garden+to+Table+Chiangmai",
+            "info": "https://www.google.com/maps/search/?api=1&query=Garden+to+Table+Chiangmai",
+            "photoQuery": "Garden to Table Chiangmai",
+            "imageStatus": "pending",
+            "verified": "2026-08-16",
+            "image": "./img/places/garden-table.webp"
+        },
+        {
+            "id": "thai-food-resto-chiangmai",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "Thai Food Resto",
+            "icon": "🍜",
+            "category": "food",
+            "tags": [
+                "food",
+                "thai",
+                "oldcity",
+                "nearhotel",
+                "near-glory-wabi-sabi"
+            ],
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ],
+            "badges": [
+                "🏨 Glory Wabi Sabi",
+                "4.8 · 1k reseñas",
+                "thai",
+                "Old City"
+            ],
+            "priority": "MEDIO-ALTO",
+            "duration": "1–1.5 h",
+            "bestTime": "Comida / cena",
+            "foodConfidence": "MEDIA-ALTA · no garantía",
+            "summary": "Restaurante tailandés casual y muy bien valorado en la parte norte de Old City.",
+            "why": "Lo dejamos como segunda opción cercana: si Garden to Table está lleno o cerrado, no tenéis que improvisar.",
+            "address": "47/2 Singharat 4 Alley, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Thai+Food+Resto+Chiang+Mai",
+            "info": "https://www.google.com/maps/search/?api=1&query=Thai+Food+Resto+Chiang+Mai",
+            "photoQuery": "Thai Food Resto Chiang Mai",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "reliever-health-massage-chiangmai",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "Reliever Health Massage",
+            "icon": "💆",
+            "category": "massage",
+            "tags": [
+                "massage",
+                "oldcity",
+                "nearhotel",
+                "near-glory-wabi-sabi"
+            ],
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ],
+            "badges": [
+                "🏨 Glory Wabi Sabi",
+                "4.9 · 600+ reseñas",
+                "Old City",
+                "hasta tarde"
+            ],
+            "priority": "ALTO",
+            "duration": "1–2 h",
+            "bestTime": "Tarde / noche",
+            "summary": "Centro de masaje con excelentes valoraciones en el norte de Old City y horario amplio.",
+            "why": "Muy buena opción cercana para repetir masaje varias veces sin convertirlo en una actividad de media tarde.",
+            "address": "201-203 Prapokklao Rd, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Reliever+Health+Massage+Chiang+Mai",
+            "info": "https://www.google.com/maps/search/?api=1&query=Reliever+Health+Massage+Chiang+Mai",
+            "photoQuery": "Reliever Health Massage Chiang Mai",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "de-vieng-massage-chiangmai",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "De VienG Massage",
+            "icon": "💆",
+            "category": "massage",
+            "tags": [
+                "massage",
+                "oldcity",
+                "nearhotel",
+                "near-glory-wabi-sabi"
+            ],
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ],
+            "badges": [
+                "🏨 Glory Wabi Sabi",
+                "4.9",
+                "Old City",
+                "11–23"
+            ],
+            "priority": "ALTO",
+            "duration": "1–2 h",
+            "bestTime": "Tarde / noche",
+            "summary": "Otra opción de masaje muy bien valorada dentro de Old City.",
+            "why": "Segundo comodín de cercanía, útil si queréis decidir por disponibilidad o estar ya paseando por el centro histórico.",
+            "address": "103/2 Intrawarorot Rd, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=De+VienG+Massage+Chiang+Mai",
+            "info": "https://www.google.com/maps/search/?api=1&query=De+VienG+Massage+Chiang+Mai",
+            "photoQuery": "De VienG Massage Chiang Mai",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "wat-chiang-yeun",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "Wat Chiang Yeun",
+            "icon": "🛕",
+            "category": "temple",
+            "tags": [
+                "temple",
+                "culture",
+                "nearhotel",
+                "near-glory-wabi-sabi"
+            ],
+            "nearHotels": [
+                "glory-wabi-sabi"
+            ],
+            "badges": [
+                "🏨 Glory Wabi Sabi",
+                "cerca hotel",
+                "templo local",
+                "Si Phum"
+            ],
+            "priority": "MEDIO",
+            "duration": "30–45 min",
+            "bestTime": "Mañana / tarde",
+            "summary": "Templo local al norte de Old City que queda muy cómodo desde el Glory Wabi Sabi.",
+            "why": "No lo pondría por encima de Doi Suthep o Chedi Luang; entra para esos huecos de 30–45 minutos en los que queréis pasear sin transporte.",
+            "address": "160 Manee Nopparat Rd, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Wat+Chiang+Yeun+Chiang+Mai",
+            "info": "https://www.google.com/maps/search/?api=1&query=Wat+Chiang+Yeun+Chiang+Mai",
+            "photoQuery": "Wat Chiang Yeun Chiang Mai",
+            "imageStatus": "pending",
+            "verified": "2026-08-16",
+            "image": "./img/places/wat-chiang-yeun.jpg"
+        },
+        {
+            "id": "doppio-specialty-khaosan",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Doppio Specialty Coffee · Khaosan",
+            "icon": "☕",
+            "category": "coffee",
+            "tags": [
+                "coffee",
+                "specialty",
+                "nearhotel",
+                "near-nouvo-city"
+            ],
+            "nearHotels": [
+                "nouvo-city"
+            ],
+            "badges": [
+                "🏨 Nouvo City",
+                "4.8",
+                "06:30",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "30–60 min",
+            "bestTime": "Desayuno / mañana",
+            "summary": "Café de especialidad en Phra Sumen, especialmente práctico desde Nouvo City y abierto desde primera hora.",
+            "why": "Probablemente el mejor “café de diario” de vuestra segunda estancia por combinación de cercanía, horario y valoraciones.",
+            "address": "313 Phra Sumen Rd, Wat Bowon Niwet, Phra Nakhon, Bangkok 10200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Doppio+Specialty+Coffee+Khaosan+Road",
+            "info": "https://www.google.com/maps/search/?api=1&query=Doppio+Specialty+Coffee+Khaosan+Road",
+            "photoQuery": "Doppio Specialty Coffee Khaosan Bangkok",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "the-island-bangkok-samsen",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "The Island Bangkok · Samsen 4",
+            "icon": "🍜",
+            "category": "food",
+            "tags": [
+                "food",
+                "thai",
+                "nearhotel",
+                "near-nouvo-city"
+            ],
+            "nearHotels": [
+                "nouvo-city"
+            ],
+            "badges": [
+                "🏨 Nouvo City",
+                "4.9 · 15k+ reseñas",
+                "Samsen 4",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "1–1.5 h",
+            "bestTime": "Desayuno / comida / cena",
+            "foodConfidence": "MEDIA-ALTA · no garantía",
+            "summary": "Restaurante tailandés muy popular a pocos pasos de la zona de Samsen, con horario amplísimo.",
+            "why": "Es el tipo de sitio que interesa tener guardado junto al hotel para una comida fácil cuando no queréis desplazaros después de un día largo.",
+            "address": "49 Samsen 4 Alley, Ban Phan Thom, Phra Nakhon, Bangkok 10200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=The+Island+Bangkok+Samsen+4",
+            "info": "https://www.google.com/maps/search/?api=1&query=The+Island+Bangkok+Samsen+4",
+            "photoQuery": "The Island Bangkok Samsen restaurant",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "samsen-restaurant-bar",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Samsen Restaurant & Bar",
+            "icon": "🍜",
+            "category": "food",
+            "tags": [
+                "food",
+                "thai",
+                "nearhotel",
+                "near-nouvo-city"
+            ],
+            "nearHotels": [
+                "nouvo-city"
+            ],
+            "badges": [
+                "🏨 Nouvo City",
+                "4.7 · 1.9k reseñas",
+                "Samsen 2",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "1–1.5 h",
+            "bestTime": "Comida / cena",
+            "foodConfidence": "MEDIA-ALTA · no garantía",
+            "summary": "Opción tailandesa muy bien valorada en Samsen 2, literalmente en vuestro barrio durante la segunda estancia.",
+            "why": "La dejo como alternativa cercana a The Island para que tengáis dos opciones sin necesidad de buscar al momento.",
+            "address": "Samsen 2 Alley, Ban Phan Thom, Phra Nakhon, Bangkok 10200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Samsen+Restaurant+Bar+Bangkok",
+            "info": "https://www.google.com/maps/search/?api=1&query=Samsen+Restaurant+Bar+Bangkok",
+            "photoQuery": "Samsen Restaurant and Bar Bangkok",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "thaithong-massage-samsen",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "ThaiThong Massage · Samsen",
+            "icon": "💆",
+            "category": "massage",
+            "tags": [
+                "massage",
+                "nearhotel",
+                "near-nouvo-city"
+            ],
+            "nearHotels": [
+                "nouvo-city"
+            ],
+            "badges": [
+                "🏨 Nouvo City",
+                "4.7 · 650+ reseñas",
+                "Samsen Rd",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "1–2 h",
+            "bestTime": "Tarde / noche",
+            "summary": "Masaje tailandés en la misma Samsen Road, con buen volumen de reseñas y horario hasta las 23:00.",
+            "why": "Es exactamente el tipo de opción que interesa cerca del hotel: salir, masaje y volver andando sin logística.",
+            "address": "112 Samsen Rd, Ban Phan Thom, Phra Nakhon, Bangkok 10200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=ThaiThong+Massage+Samsen+Bangkok",
+            "info": "https://www.google.com/maps/search/?api=1&query=ThaiThong+Massage+Samsen+Bangkok",
+            "photoQuery": "ThaiThong Massage Samsen Bangkok",
+            "imageStatus": "pending",
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "wat-bowonniwet",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Wat Bowonniwet",
+            "icon": "🛕",
+            "category": "temple",
+            "tags": [
+                "temple",
+                "culture",
+                "nearhotel",
+                "near-nouvo-city"
+            ],
+            "nearHotels": [
+                "nouvo-city"
+            ],
+            "badges": [
+                "🏨 Nouvo City",
+                "4.7 · 4k reseñas",
+                "Phra Sumen",
+                "cerca hotel"
+            ],
+            "priority": "ALTO",
+            "duration": "45–60 min",
+            "bestTime": "Mañana",
+            "summary": "Templo histórico de Phra Nakhon, mucho más tranquilo que los grandes imprescindibles y muy cómodo desde Nouvo City.",
+            "why": "No sustituye a Wat Pho o Wat Arun; lo guardamos porque aquí la cercanía sí añade valor y permite una visita espontánea a primera hora.",
+            "address": "248 Phra Sumen Rd, Wat Bowon Niwet, Phra Nakhon, Bangkok 10200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Wat+Bowonniwet+Bangkok",
+            "info": "https://www.google.com/maps/search/?api=1&query=Wat+Bowonniwet+Bangkok",
+            "photoQuery": "Wat Bowonniwet Bangkok Wikimedia Commons",
+            "imageStatus": "pending",
+            "verified": "2026-08-16",
+            "image": "./img/places/bowonniwet.webp"
+        },
+        {
+            "id": "konnichipan-bakery",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Konnichipan Bakery",
+            "icon": "🥐",
+            "category": "food",
+            "tags": [
+                "food",
+                "breakfast",
+                "bakery",
+                "nearhotel",
+                "near-nouvo-city"
+            ],
+            "nearHotels": [
+                "nouvo-city"
+            ],
+            "badges": [
+                "🏨 Nouvo City",
+                "4.8 · 1.6k reseñas",
+                "desayuno",
+                "08:00"
+            ],
+            "priority": "MEDIO-ALTO",
+            "duration": "30–60 min",
+            "bestTime": "Desayuno",
+            "foodConfidence": "MEDIA-ALTA · no garantía",
+            "summary": "Panadería muy popular cerca de la zona Khao San/Phra Sumen, útil para un desayuno rápido y sencillo.",
+            "why": "No entra como restaurante imprescindible, sino como recurso muy práctico para arrancar temprano sin buscar dónde desayunar.",
+            "address": "183 Chakrabongse Rd, Talat Yot, Phra Nakhon, Bangkok 10200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Konnichipan+Bakery+Bangkok",
+            "info": "https://www.google.com/maps/search/?api=1&query=Konnichipan+Bakery+Bangkok",
+            "photoQuery": "Konnichipan Bakery Bangkok",
+            "imageStatus": "pending",
+            "verified": "2026-08-16",
+            "image": "./img/places/konnichipan.jpg"
+        },
+        {
+            "id": "ancient-city-muang-boran",
+            "city": "bangkok",
+            "cityLabel": "Bangkok · Samut Prakan",
+            "name": "Ancient City · Muang Boran",
+            "icon": "🏯",
+            "category": "area",
+            "tags": [
+                "area",
+                "must",
+                "culture",
+                "architecture",
+                "photogenic",
+                "daytrip"
+            ],
+            "badges": [
+                "MUST",
+                "ciudad-museo",
+                "muy fotogénico"
+            ],
+            "priority": "MUY ALTO",
+            "duration": "4–6 h",
+            "bestTime": "Mañana · salir pronto",
+            "summary": "Enorme museo al aire libre con palacios, templos, pabellones y recreaciones de arquitectura de distintas regiones de Tailandia.",
+            "why": "Es una omisión importante de la versión anterior: no es otro templo aislado, sino uno de los conjuntos visuales más espectaculares de la zona de Bangkok. Requiere desplazamiento a Samut Prakan, así que conviene tratarlo como medio día largo.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Ancient+City+Muang+Boran+Samut+Prakan",
+            "info": "https://www.tourismthailand.org/Attraction/ancient-city",
+            "photoQuery": "Ancient City Muang Boran Samut Prakan",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/ancient-city.webp"
+        },
+        {
+            "id": "erawan-museum",
+            "city": "bangkok",
+            "cityLabel": "Bangkok · Samut Prakan",
+            "name": "Erawan Museum",
+            "icon": "🐘",
+            "category": "area",
+            "tags": [
+                "area",
+                "culture",
+                "architecture",
+                "photogenic",
+                "near-ancient-city"
+            ],
+            "badges": [
+                "elefante gigante",
+                "arquitectura",
+                "combinar con Ancient City"
+            ],
+            "priority": "ALTO",
+            "duration": "1–2 h",
+            "bestTime": "Combinar con Ancient City",
+            "summary": "Museo reconocible por la enorme escultura del elefante de tres cabezas y por un interior ornamental muy singular.",
+            "why": "Tiene sentido sobre todo el mismo día que Ancient City, porque ambos están en Samut Prakan. Así el desplazamiento largo se convierte en una ruta visual potente.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Erawan+Museum+Samut+Prakan",
+            "info": "https://www.tourismthailand.org/Attraction/erawan-museum",
+            "photoQuery": "Erawan Museum Samut Prakan",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/erawan-museum.jpg"
+        },
+        {
+            "id": "mahanakhon-skywalk",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Mahanakhon SkyWalk",
+            "icon": "🌆",
+            "category": "viewpoint",
+            "tags": [
+                "viewpoint",
+                "must",
+                "skyline",
+                "sunset",
+                "city"
+            ],
+            "badges": [
+                "SKYLINE",
+                "360°",
+                "314 m"
+            ],
+            "priority": "MUY ALTO",
+            "duration": "1.5–2 h",
+            "bestTime": "Última hora de luz → noche",
+            "summary": "Mirador panorámico en altura con vistas de 360° sobre Bangkok y plataforma exterior en la parte superior.",
+            "why": "Es el mirador de skyline que faltaba en la app. Si queréis una sola vista moderna y espectacular de toda la ciudad, esta sería mi elección principal.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=King+Power+Mahanakhon+SkyWalk",
+            "info": "https://kingpowermahanakhon.co.th/skywalk/",
+            "photoQuery": "Mahanakhon SkyWalk Bangkok sunset",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/glass-skywalk-night-view.jpg"
+        },
+        {
+            "id": "benjakitti-green-bridge",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Benjakitti Forest Park + Green Bridge",
+            "icon": "🌿",
+            "category": "nature",
+            "tags": [
+                "nature",
+                "area",
+                "viewpoint",
+                "skyline",
+                "walk",
+                "urban"
+            ],
+            "badges": [
+                "bosque urbano",
+                "pasarelas",
+                "skyline"
+            ],
+            "priority": "ALTO",
+            "duration": "1.5–3 h",
+            "bestTime": "Tarde / golden hour",
+            "summary": "Gran parque-bosque urbano con humedales, pasarelas elevadas y vistas donde la vegetación contrasta con los rascacielos de Bangkok.",
+            "why": "Añade el Bangkok verde que nos faltaba y funciona muy bien cuando queráis bajar el ritmo sin salir de la ciudad. Puede enlazarse caminando hacia Lumphini.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Benjakitti+Forest+Park+Bangkok",
+            "info": "https://greener.bangkok.go.th/en/park/benjakitti-park/",
+            "photoQuery": "Benjakitti Forest Park Bangkok skyline",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/benjakitti-forest-park-skywalk-L.jpg"
+        },
+        {
+            "id": "lumphini-water-monitors",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Lumphini Park · varanos urbanos",
+            "icon": "🦎",
+            "category": "animals",
+            "tags": [
+                "animals",
+                "nature",
+                "area",
+                "wildlife",
+                "city",
+                "walk"
+            ],
+            "badges": [
+                "varanos",
+                "fauna urbana",
+                "parque"
+            ],
+            "priority": "ALTO",
+            "duration": "1–2 h",
+            "bestTime": "Primera hora o última tarde",
+            "summary": "Gran parque céntrico donde es habitual observar varanos acuáticos asiáticos en libertad alrededor de lagos y zonas verdes.",
+            "why": "Da variedad real a la categoría Animales sin recurrir a espectáculos ni interacción con fauna cautiva. Mirarlos con distancia y nunca alimentarlos.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Lumphini+Park+Bangkok",
+            "info": "https://greener.bangkok.go.th/en/park/suan-lumpini/",
+            "photoQuery": "Lumphini Park Bangkok monitor lizard",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/varano.webp"
+        },
+        {
+            "id": "wat-paknam-phasi-charoen",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "Wat Paknam Phasi Charoen",
+            "icon": "🛕",
+            "category": "temple",
+            "tags": [
+                "temple",
+                "culture",
+                "photogenic",
+                "architecture",
+                "giant-buddha"
+            ],
+            "badges": [
+                "Buda gigante",
+                "muy visual",
+                "menos clásico"
+            ],
+            "priority": "MUY ALTO",
+            "duration": "1–1.5 h",
+            "bestTime": "Mañana / tarde",
+            "summary": "Complejo religioso conocido por su enorme estatua de Buda y una estética muy distinta a los templos clásicos del centro histórico.",
+            "why": "Lo añado porque aporta una imagen totalmente diferente a Wat Pho, Wat Arun o Grand Palace; merece aparecer entre los templos visualmente más especiales.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Wat+Paknam+Phasi+Charoen+Bangkok",
+            "info": "https://www.google.com/maps/search/?api=1&query=Wat+Paknam+Phasi+Charoen+Bangkok",
+            "photoQuery": "Wat Paknam Phasi Charoen giant Buddha Bangkok",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/wat-paknam-phasi-charoen-buddha-bangkok.webp"
+        },
+        {
+            "id": "iconsiam-river-park",
+            "city": "bangkok",
+            "cityLabel": "Bangkok",
+            "name": "ICONSIAM + River Park",
+            "icon": "🌃",
+            "category": "area",
+            "tags": [
+                "area",
+                "river",
+                "shopping",
+                "sunset",
+                "skyline",
+                "evening"
+            ],
+            "badges": [
+                "río",
+                "noche",
+                "vistas urbanas"
+            ],
+            "priority": "ALTO",
+            "duration": "2–3 h",
+            "bestTime": "Atardecer → noche",
+            "summary": "Gran complejo junto al Chao Phraya con paseo exterior, vistas del río, ciudad iluminada, comida y compras.",
+            "why": "No lo pondría por el centro comercial en sí, sino como parada cómoda para ver el Bangkok moderno junto al río al caer la noche y combinarlo con barco.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=ICONSIAM+Bangkok",
+            "info": "https://www.tourismthailand.org/Articles/cater-to-your-shopping-needs-with-5-best-bangkok-shopping-malls",
+            "photoQuery": "ICONSIAM Bangkok River Park night",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/iconsiam.jpg"
+        },
+
+        {
+            "id": "bang-krachao-green-lung",
+            "city": "bangkok",
+            "cityLabel": "Bangkok · Bang Krachao",
+            "name": "Bang Krachao · pulmón verde",
+            "icon": "🚲",
+            "category": "nature",
+            "tags": [
+                "nature",
+                "area",
+                "adventure",
+                "cycling",
+                "river",
+                "daytrip"
+            ],
+            "badges": [
+                "verde",
+                "bici",
+                "escape urbano"
+            ],
+            "priority": "CANDIDATO",
+            "duration": "4–6 h",
+            "bestTime": "Mañana",
+            "summary": "Zona verde de canales, caminos y comunidades junto al Chao Phraya, ideal para recorrer en bici a ritmo tranquilo.",
+            "why": "No es imprescindible si vais justos de días, pero sí una de las mejores alternativas cuando queráis naturaleza sin hacer una excursión larga fuera de Bangkok.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Bang+Krachao+Bangkok",
+            "info": "https://www.tourismthailand.org/Articles/bangkachao-en",
+            "photoQuery": "Bang Krachao Bangkok cycling green",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/ban-krachao.jpg"
+        },
+        {
+            "id": "chiangmai-old-city-tha-phae",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "Old City + Tha Phae Gate",
+            "icon": "🧱",
+            "category": "area",
+            "tags": [
+                "area",
+                "must",
+                "oldcity",
+                "walk",
+                "culture",
+                "temple"
+            ],
+            "badges": [
+                "MUST",
+                "murallas",
+                "paseo"
+            ],
+            "priority": "MUY ALTO",
+            "duration": "2–4 h",
+            "bestTime": "Mañana o última tarde",
+            "summary": "El corazón histórico de Chiang Mai: foso, restos de muralla, Tha Phae Gate, calles interiores y templos a distancia caminable.",
+            "why": "La app tenía muchos templos individuales pero faltaba la zona como experiencia. Sirve para abrir el mapa y simplemente pasear sin convertir cada parada en una misión.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Tha+Phae+Gate+Chiang+Mai",
+            "info": "https://www.tourismthailand.org/Destinations/Provinces/Chiang-Mai/101",
+            "photoQuery": "Tha Phae Gate Chiang Mai Old City moat",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/gates-of-chiang-mai-old-city-walls.webp"
+        },
+        {
+            "id": "mae-kampong-village",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai · Mae On",
+            "name": "Mae Kampong Village",
+            "icon": "🏡",
+            "category": "area",
+            "tags": [
+                "area",
+                "nature",
+                "must",
+                "village",
+                "forest",
+                "coffee",
+                "daytrip"
+            ],
+            "badges": [
+                "pueblo montaña",
+                "verde",
+                "cafés"
+            ],
+            "priority": "MUY ALTO",
+            "duration": "medio día / día",
+            "bestTime": "Salir temprano",
+            "summary": "Pequeño pueblo de montaña rodeado de bosque, cursos de agua, casas de madera, cafés y ambiente rural muy verde.",
+            "why": "Es una de las zonas bellas que faltaban claramente. En agosto puede tener un aspecto especialmente exuberante; lo veo como alternativa fuerte a llenar otro día solo con templos.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Mae+Kampong+Village+Chiang+Mai",
+            "info": "https://www.tourismthailand.org/Attraction/mae-kampong-village",
+            "photoQuery": "Mae Kampong Village Chiang Mai rainy season",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/kampong.jpg"
+        },
+        {
+            "id": "mon-jam-viewpoint",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai · Mae Rim",
+            "name": "Mon Jam · montaña y vistas",
+            "icon": "⛰️",
+            "category": "viewpoint",
+            "tags": [
+                "viewpoint",
+                "nature",
+                "mountain",
+                "garden",
+                "photogenic"
+            ],
+            "badges": [
+                "montaña",
+                "vistas",
+                "Mae Rim"
+            ],
+            "priority": "ALTO",
+            "duration": "2–4 h",
+            "bestTime": "Mañana / buena visibilidad",
+            "summary": "Zona elevada de Mae Rim con vistas amplias de montaña y valle, jardines y paisaje rural.",
+            "why": "Añade un mirador natural de verdad en Chiang Mai, distinto de la vista urbana desde Doi Suthep. Mejor combinarlo con otros planes de Mae Rim.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Mon+Jam+Chiang+Mai",
+            "info": "https://www.tourismthailand.org/Attraction/mon-cham",
+            "photoQuery": "Mon Jam Chiang Mai mountain view",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/mon-jam.webp"
+        },
+        {
+            "id": "queen-sirikit-botanic-canopy",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai · Mae Rim",
+            "name": "Queen Sirikit Botanic Garden + Canopy Walk",
+            "icon": "🌺",
+            "category": "nature",
+            "tags": [
+                "nature",
+                "viewpoint",
+                "garden",
+                "walk",
+                "photogenic",
+                "mae-rim"
+            ],
+            "badges": [
+                "canopy walk",
+                "jardín botánico",
+                "Mae Rim"
+            ],
+            "priority": "ALTO",
+            "duration": "2–3 h",
+            "bestTime": "Mañana",
+            "summary": "Gran jardín botánico con invernaderos, senderos y una pasarela elevada entre las copas de los árboles.",
+            "why": "Es naturaleza muy accesible y visual. Tiene mucho sentido en una ruta Mae Rim junto con Mon Jam, evitando hacer dos desplazamientos separados.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Queen+Sirikit+Botanic+Garden+Chiang+Mai",
+            "info": "https://botanic.qsbg.org/where-to-go/show/32",
+            "photoQuery": "Queen Sirikit Botanic Garden Canopy Walk Chiang Mai",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/botanic_garden10.jpg"
+        },
+        {
+            "id": "doi-pui-nature-trail-wildlife",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai · Doi Suthep-Pui",
+            "name": "Doi Pui Nature Trail · bosque y aves",
+            "icon": "🦜",
+            "category": "animals",
+            "tags": [
+                "animals",
+                "nature",
+                "wildlife",
+                "birds",
+                "hike",
+                "viewpoint",
+                "forest"
+            ],
+            "badges": [
+                "aves",
+                "bosque",
+                "sendero"
+            ],
+            "priority": "ALTO",
+            "duration": "2–4 h",
+            "bestTime": "Mañana · revisar lluvia",
+            "summary": "Sendero de bosque en Doi Pui para disfrutar del entorno de montaña y observar fauna, especialmente aves, sin plantearlo como una experiencia de animales cautivos.",
+            "why": "Da a Animales una opción de fauna silvestre real en el norte. No promete avistamientos: el atractivo es caminar por un hábitat natural donde la observación es parte del paseo.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Doi+Pui+Nature+Trail+Chiang+Mai",
+            "info": "https://www.tourismthailand.org/Articles/forest-bathing-en",
+            "photoQuery": "Doi Pui Nature Trail Chiang Mai forest birds",
+            "verified": "2026-08-16",
+            "imageStatus": "pending"
+        },
+        {
+            "id": "bang-pa-in-wat-niwet",
+            "city": "ayutthaya",
+            "cityLabel": "Ayutthaya · Bang Pa-In",
+            "name": "Bang Pa-In Palace + Wat Niwet Thammaprawat",
+            "icon": "🏰",
+            "category": "area",
+            "tags": [
+                "area",
+                "culture",
+                "architecture",
+                "palace",
+                "temple",
+                "photogenic"
+            ],
+            "badges": [
+                "palacio",
+                "arquitectura singular",
+                "extra"
+            ],
+            "priority": "CANDIDATO",
+            "duration": "2–3 h",
+            "bestTime": "Mañana · si encaja con transporte",
+            "summary": "Palacio real de verano con jardines y pabellones, combinable con el peculiar Wat Niwet Thammaprawat al otro lado del río.",
+            "why": "Aporta una estética distinta a las ruinas de Ayutthaya. No lo pondría por delante de Mahathat, Si Sanphet o Chaiwatthanaram, pero sí como extra bonito si la logística encaja.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Bang+Pa-In+Palace+Ayutthaya",
+            "info": "https://www.tourismthailand.org/Attraction/bang-pa-in-palace",
+            "photoQuery": "Bang Pa-In Palace Wat Niwet Ayutthaya",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/bang-pa-in-royal-palace-l.jpg"
+        },
+        {
+            "id": "wat-sam-phran-dragon-temple",
+            "city": "bangkok",
+            "cityLabel": "Bangkok · Nakhon Pathom",
+            "name": "Wat Sam Phran · Dragon Temple",
+            "icon": "🐉",
+            "category": "temple",
+            "tags": [
+                "temple",
+                "architecture",
+                "photogenic",
+                "unique",
+                "daytrip"
+            ],
+            "badges": [
+                "dragón gigante",
+                "muy singular",
+                "lejos"
+            ],
+            "priority": "CANDIDATO",
+            "duration": "2–4 h con traslado",
+            "bestTime": "Mañana · solo si apetece una escapada",
+            "summary": "Templo conocido por una torre cilíndrica rosa de 17 plantas envuelta por una enorme escultura de dragón.",
+            "why": "Visualmente es de los templos más raros de los alrededores de Bangkok, pero está bastante alejado del centro. Lo guardo como candidato fotogénico, no por delante de los imprescindibles.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Wat+Sam+Phran+Dragon+Temple",
+            "info": "https://www.google.com/maps/search/?api=1&query=Wat+Sam+Phran+Dragon+Temple",
+            "photoQuery": "Wat Sam Phran Dragon Temple Thailand",
+            "verified": "2026-08-16",
+            "imageStatus": "pending",
+            "image": "./img/places/Wat-Samphran-Bangkok-Avaxnews.webp"
+        },
+        {
+            "id": "khlong-bang-luang-artist-house",
+            "city": "bangkok",
+            "cityLabel": "Bangkok · Thonburi",
+            "name": "Khlong Bang Luang + Artist’s House",
+            "icon": "🎨",
+            "image": "./img/places/khlon-bang.jpg",
+            "imageStatus": "ready",
+            "category": "area",
+            "tags": [
+                "area",
+                "river",
+                "culture",
+                "art",
+                "local",
+                "quiet",
+                "photogenic"
+            ],
+            "badges": [
+                "canales",
+                "arte",
+                "Bangkok local"
+            ],
+            "priority": "ALTO",
+            "duration": "2–3 h",
+            "bestTime": "Mañana o media tarde",
+            "summary": "Comunidad tradicional junto al canal en Thonburi, con casas de madera, pasarelas junto al agua y la Artist’s House, una antigua vivienda convertida en espacio artístico.",
+            "why": "Aporta una cara de Bangkok completamente distinta a templos y rascacielos: canales, madera, barrio local y un ritmo mucho más tranquilo.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Khlong+Bang+Luang+Artist+House+Bangkok",
+            "info": "https://www.tourismthailand.org/Attraction/khlong-bang-luang-community-and-artist-s-house-khlong-bang-luang",
+            "photoQuery": "Khlong Bang Luang Artist House Bangkok",
+            "credit": {
+                "author": "shankar s.",
+                "license": "CC BY 2.0",
+                "source": "https://www.flickr.com/photos/shankaronline/44751664790"
+            },
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "phra-athit-santichaiprakan",
+            "city": "bangkok",
+            "cityLabel": "Bangkok · Bang Lamphu",
+            "name": "Phra Athit + Santichaiprakan Park",
+            "icon": "🌅",
+            "image": "./img/places/santi-chai.jpg",
+            "imageStatus": "ready",
+            "category": "area",
+            "tags": [
+                "area",
+                "river",
+                "sunset",
+                "walk",
+                "culture",
+                "nearhotel",
+                "near-nouvo-city"
+            ],
+            "badges": [
+                "🏨 Nouvo City",
+                "río",
+                "Phra Sumen"
+            ],
+            "priority": "ALTO",
+            "duration": "1–2 h",
+            "bestTime": "Última tarde / sunset",
+            "summary": "Pequeño parque junto al Chao Phraya, alrededor del histórico Phra Sumen Fort y al final de Phra Athit Road.",
+            "why": "Es un plan perfecto sin logística desde Nouvo City: salir andando, pasear por Bang Lamphu y terminar junto al río al caer la tarde.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Santichaiprakan+Park+Bangkok",
+            "info": "https://www.tourismthailand.org/Attraction/santi-chai-prakan-royal-pavilion",
+            "photoQuery": "Santichaiprakan Park Phra Sumen Bangkok",
+            "credit": {
+                "author": "Dominic Nelson",
+                "license": "CC BY-SA 4.0",
+                "source": "https://commons.wikimedia.org/wiki/File:Bangkok_-_Santichaiprakarn_Throne_Hall_at_golden_hour_Jan_2024.jpg"
+            },
+            "nearHotels": [
+                "nouvo-city"
+            ],
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "baan-kang-wat",
+            "city": "chiangmai",
+            "cityLabel": "Chiang Mai",
+            "name": "Baan Kang Wat · Artist Village",
+            "icon": "🎨",
+            "image": "./img/places/baan-kang.jpg",
+            "imageStatus": "ready",
+            "category": "area",
+            "tags": [
+                "area",
+                "art",
+                "craft",
+                "coffee",
+                "local",
+                "nature",
+                "walk",
+                "photogenic"
+            ],
+            "badges": [
+                "artistas",
+                "artesanía",
+                "cafés"
+            ],
+            "priority": "ALTO",
+            "duration": "1.5–2.5 h",
+            "bestTime": "Media mañana / tarde tranquila",
+            "summary": "Pequeña comunidad creativa entre vegetación con talleres de artistas, cerámica, artesanía, galerías, cafés y espacios para pasear.",
+            "why": "Añade algo que no tenemos repetido en Chiang Mai: un plan bonito, creativo y relajado. Además encaja muy bien el mismo día que Wat Umong por zona.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Baan+Kang+Wat+Chiang+Mai",
+            "info": "https://www.google.com/maps/search/?api=1&query=Baan+Kang+Wat+Chiang+Mai",
+            "photoQuery": "Baan Kang Wat Artist Village Chiang Mai",
+            "credit": {
+                "author": "Aleah Phils",
+                "license": "CC BY-NC 2.0",
+                "source": "https://www.flickr.com/photos/67117584@N04/23499389328"
+            },
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "sai-daeng-beach",
+            "city": "kohtao",
+            "cityLabel": "Koh Tao",
+            "name": "Sai Daeng Beach",
+            "icon": "🐢",
+            "image": "./img/places/sai-daeng.jpg",
+            "imageStatus": "ready",
+            "category": "snorkel",
+            "tags": [
+                "snorkel",
+                "beach",
+                "nature",
+                "animals",
+                "quiet",
+                "coral"
+            ],
+            "badges": [
+                "coral",
+                "tortugas",
+                "Shark Island"
+            ],
+            "priority": "ALTO",
+            "duration": "2–4 h",
+            "bestTime": "Mañana · según estado del mar",
+            "summary": "Pequeña playa del sureste de Koh Tao frente a Shark Island, con agua clara y buenos puntos de snorkel en los extremos de la bahía.",
+            "why": "Complementa muy bien Tanote y Aow Leuk: combina playa bonita con coral y posibilidad de encontrar tortugas o tiburones de punta negra, sin prometer avistamientos.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Sai+Daeng+Beach+Koh+Tao",
+            "info": "https://www.thefunkyturtle.com/koh-tao/beaches/sai-daeng-beach/",
+            "photoQuery": "Sai Daeng Beach Koh Tao",
+            "credit": {
+                "author": "Fabio Achilli",
+                "license": "CC BY 2.0",
+                "source": "https://www.flickr.com/photos/travelourplanet/48109665552/"
+            },
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "wat-phanan-choeng",
+            "city": "ayutthaya",
+            "cityLabel": "Ayutthaya",
+            "name": "Wat Phanan Choeng",
+            "icon": "🙏",
+            "image": "./img/places/wat-phanan-choeng.jpg",
+            "imageStatus": "ready",
+            "category": "temple",
+            "tags": [
+                "temple",
+                "culture",
+                "buddha",
+                "historic",
+                "photogenic"
+            ],
+            "badges": [
+                "Buda 19 m",
+                "templo vivo",
+                "pre-Ayutthaya"
+            ],
+            "priority": "ALTO",
+            "duration": "45–75 min",
+            "bestTime": "Mañana / combinar con ruta Ayutthaya",
+            "summary": "Templo histórico activo conocido por su gigantesco Buda dorado sentado de unos 19 metros de altura.",
+            "why": "Las demás grandes paradas de Ayutthaya son principalmente ruinas. Este aporta algo completamente distinto: un templo vivo, color, culto actual y un Buda monumental.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Wat+Phanan+Choeng+Ayutthaya",
+            "info": "https://www.tourismthailand.org/Attraction/wat-phananchoeng",
+            "photoQuery": "Wat Phanan Choeng Golden Buddha Ayutthaya",
+            "credit": {
+                "author": "Alex Kovacheva",
+                "license": "CC BY-SA 4.0",
+                "source": "https://commons.wikimedia.org/wiki/File:Ayutthaya_Thailand_Wat_Phanan_Choeng_Golden_Big_Buddha.JPG"
+            },
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "yun-lai-viewpoint",
+            "city": "pai",
+            "cityLabel": "Pai",
+            "name": "Yun Lai Viewpoint",
+            "icon": "🌄",
+            "image": "./img/places/yun-lai-viewpoint.jpg",
+            "imageStatus": "ready",
+            "category": "viewpoint",
+            "tags": [
+                "viewpoint",
+                "nature",
+                "sunrise",
+                "mountain",
+                "photogenic"
+            ],
+            "badges": [
+                "amanecer",
+                "niebla",
+                "valle"
+            ],
+            "priority": "ALTO SI VAMOS",
+            "duration": "1–1.5 h",
+            "bestTime": "Amanecer",
+            "summary": "Mirador elevado sobre el valle de Pai conocido especialmente por las primeras luces del día y las capas de niebla entre las montañas.",
+            "why": "Si finalmente hacemos Pai, este sí merece estar en la lista: es uno de esos planes donde madrugar tiene una recompensa visual muy clara.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Yun+Lai+Viewpoint+Pai",
+            "info": "https://www.tourismthailand.org/Attraction/yun-lai-viewpoint",
+            "photoQuery": "Yun Lai Viewpoint Pai sunrise",
+            "credit": {
+                "author": "Visions of Domino",
+                "license": "CC BY 2.0",
+                "source": "https://commons.wikimedia.org/wiki/File:Yun_Lai_Viewpoint,_Pai_(23900974576).jpg"
+            },
+            "verified": "2026-08-16"
+        },
+        {
+            "id": "sairee-beach-area",
+            "city": "kohtao",
+            "cityLabel": "Koh Tao",
+            "name": "Sairee Beach · zona principal",
+            "icon": "🌴",
+            "image": "./img/places/sairee-beach.jpg",
+            "imageStatus": "ready",
+            "category": "area",
+            "tags": [
+                "area",
+                "beach",
+                "sunset",
+                "walk",
+                "food",
+                "music",
+                "evening"
+            ],
+            "badges": [
+                "paseo",
+                "sunset",
+                "ambiente"
+            ],
+            "priority": "ALTO",
+            "duration": "2–4 h / sobre la marcha",
+            "bestTime": "Tarde → noche",
+            "summary": "La gran zona de playa y ambiente de Koh Tao: paseo junto al mar, restaurantes, cafés, bares y una buena orientación para terminar el día viendo el atardecer.",
+            "why": "No entra como nuestro mejor punto de snorkel sino como zona útil: cuando queramos simplemente salir, caminar, cenar, tomar algo y ver vida en la isla, sabemos dónde ir.",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Sairee+Beach+Koh+Tao",
+            "info": "https://www.tourismthailand.org/Destinations/Provinces/Ko-Tao/361",
+            "photoQuery": "Sairee Beach Koh Tao",
+            "credit": {
+                "author": "David Sim",
+                "license": "CC BY 2.0",
+                "source": "https://commons.wikimedia.org/wiki/File:The_south_end_of_Sairee_beach,_Koh_Tao,_Thailand.jpg"
+            },
+            "verified": "2026-08-16"
         }
     ],
     "selectionRules": {
@@ -4241,5 +5618,34 @@ window.TRIP_DATA = {
                 "marcar elementos REVALIDAR antes de quedar sin conexión"
             ]
         }
-    }
+    },
+    "hotelBases": [
+        {
+            "id": "queensland",
+            "city": "bangkok",
+            "name": "Queensland Hotel",
+            "stay": "19 AGO",
+            "address": "388 Si Ayutthaya Rd, Thanon Phaya Thai, Ratchathewi, Bangkok 10400, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Queensland+Hotel+Bangkok+388+Si+Ayutthaya+Road",
+            "note": "Base de la primera noche. Priorizamos planes rápidos y cómodos alrededor de Ratchathewi/Phaya Thai."
+        },
+        {
+            "id": "glory-wabi-sabi",
+            "city": "chiangmai",
+            "name": "Glory Wabi Sabi",
+            "stay": "20–25 AGO",
+            "address": "11 Sanamkila Rd, Si Phum, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Glory+Wabi+Sabi+Chiang+Mai",
+            "note": "Base principal del norte, cerca del borde norte de Old City."
+        },
+        {
+            "id": "nouvo-city",
+            "city": "bangkok",
+            "name": "Nouvo City Hotel",
+            "stay": "29 AGO–2 SEP",
+            "address": "2 Samsen Road, Ban Phan Thom, Phra Nakhon, Bangkok 10200, Thailand",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Nouvo+City+Hotel+Bangkok",
+            "note": "Base final de Bangkok, muy útil para Old City, Samsen, Phra Sumen y Khao San sin estar en pleno ruido."
+        }
+    ]
 };
