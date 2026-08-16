@@ -1158,8 +1158,12 @@ main {
 
 @media (max-width:520px) {
 
+    .connection-pill {
+        display: none;
+    }
+
     .category-chips {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
@@ -1200,4 +1204,19 @@ main {
     .trip-item {
         grid-template-columns: 70px 1fr
     }
+}
+
+
+.site-footer {
+    padding: 42px 16px 10px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.site-footer span {
+    color: var(--clay);
+    font-size: 13px;
 }
