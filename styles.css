@@ -1220,3 +1220,50 @@ main {
     color: var(--clay);
     font-size: 13px;
 }
+
+
+/* =========================================
+   PERFORMANCE MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .noise {
+        display: none;
+    }
+
+    .topbar,
+    .mobile-nav,
+    .toolbar-shell,
+    .place-card,
+    .chip,
+    .priority,
+    .card-city {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .place-card {
+        box-shadow: 0 6px 18px rgba(47, 58, 42, 0.08);
+    }
+
+    .place-card:hover {
+        transform: none;
+        box-shadow: 0 6px 18px rgba(47, 58, 42, 0.08);
+    }
+
+    .card-photo {
+        transform: none;
+        transition: none;
+    }
+
+    .place-card:hover .card-photo {
+        transform: none;
+        filter: none;
+    }
+
+    .place-card {
+        content-visibility: auto;
+        contain-intrinsic-size: 430px;
+    }
+}
